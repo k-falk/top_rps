@@ -1,7 +1,4 @@
 
-let playerSelection = "rock"
-let computerSelection = computerPlay();
-console.log("Player: " + playerSelection + " Computer: " + computerSelection + " Outcome: " + playRound(playerSelection, computerSelection))
 
 function computerPlay(){
     let randNum = Math.floor(Math.random()*3);
@@ -39,7 +36,7 @@ function playRound(playerSelection, computerSelection){
                 case "scissors":
                     return "Loss";
             }
-        case "scissor":
+        case "scissors":
             switch(computerSelection){
                 case 'rock':
                     return "Loss";
@@ -50,5 +47,33 @@ function playRound(playerSelection, computerSelection){
             }
         }
     }
+
+    function game() {
+        let index = 0;
+        let wins = 0;
+        let playerSelection = prompt("Please input Rock, Paper or Scissors", "rock")
+        let computerSelection = computerPlay();
+        while(index < 5){
+
+            let outcome =  playRound(playerSelection, computerSelection);
+            console.log("Player: " + playerSelection + " Computer: " + computerSelection + " Outcome: " + outcome)
+
+            if(outcome == "Win"){
+                wins++;
+            }
+
+            playerSelection = prompt("Please input Rock, Paper or Scissors", "rock")
+            computerSelection = computerPlay();
+            index++;
+        }
+        console.log("Wins: " + wins)
+
+    }
+
+    game();
+
+
+
+    
 
 
