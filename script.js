@@ -51,10 +51,10 @@ function playRound(playerSelection, computerSelection){
     function game() {
         let index = 0;
         let wins = 0;
-        let playerSelection = prompt("Please input Rock, Paper or Scissors", "rock")
         let computerSelection = computerPlay();
         while(index < 5){
-
+            // let playerSelection = prompt("Please input Rock, Paper or Scissors", "rock")
+            computerSelection = computerPlay();
             let outcome =  playRound(playerSelection, computerSelection);
             console.log("Player: " + playerSelection + " Computer: " + computerSelection + " Outcome: " + outcome)
 
@@ -62,8 +62,7 @@ function playRound(playerSelection, computerSelection){
                 wins++;
             }
 
-            playerSelection = prompt("Please input Rock, Paper or Scissors", "rock")
-            computerSelection = computerPlay();
+            
             index++;
         }
         console.log("Wins: " + wins)
