@@ -58,6 +58,7 @@ buttons.forEach((button) => {
     let scores = Array.from(scoreStrings).forEach(function(element){
         element.innerText = element.innerText.split(" ")[0] + " " + 0;
     });
+    document.querySelector('.notif').innerText = "";
     gamesPlayed = 0;
   }
 
