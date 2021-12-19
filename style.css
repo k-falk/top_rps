@@ -4,25 +4,74 @@ html, body{
     padding: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height:100%;
+    width:100%;
+    background-color: bisque;
+
     display:flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
 
 }
 
+.header {
+    color: black;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 7em;
+    margin-bottom: 7em;
+    
+  
+}
+
 .buttons {
-    background-color: bisque;
-    margin:0;
+    background-color: black;
+    border-radius: 1em;
+
+
+    max-height: 40%;
+    min-height: 20%;
+    width:100%;
+    max-width: 50%;
+    min-width: 30%;
+    flex:1 0 0;
+    align-self: center;
+    
+    
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
-    width: 100em;
-    height: 10em;
+    flex-wrap: wrap;
+
+    margin-bottom: 3em;;
         
 }
 
 .button {
-    width: 25%;
+    background-color: coral;
+    border-color: white;
+    color: white;
+    align-self: center;
+    
+
+    border-radius: 1em;
+    font-size: 1em;
+    
+    min-width: 10em;
+    width: 30%;
+    min-height: 3em;
     height: 20%;
+    max-height: 30%;
+
     
 }
+
+.score {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    width: 20em;
+    max-width: 60%;
+}
+
+.notif {
+    align-self: center;
+}
+
